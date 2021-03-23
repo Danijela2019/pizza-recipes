@@ -15,6 +15,7 @@ import { IngredientEditComponent } from './components/ingredients/ingredient-edi
 import { HomeComponent } from './components/home/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DropDownDirective } from './directives/dropDown.directive';
+import { IngredientService } from './services/ingredient.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { DropDownDirective } from './directives/dropDown.directive';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [IngredientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

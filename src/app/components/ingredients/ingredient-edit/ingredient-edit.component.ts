@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IngredientService } from 'src/app/services/ingredient.service';
 
 @Component({
   selector: 'ingredientEdit',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IngredientEditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ingredientService:IngredientService) { }
 
   ngOnInit(): void {
+  }
+  onAddIngredient(){
+    
   }
 
 }
