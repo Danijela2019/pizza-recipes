@@ -1,0 +1,9 @@
+.pizza-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.h1 {
+  margin: 1rem;
+}

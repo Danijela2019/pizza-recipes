@@ -1,0 +1,6 @@
+<!-- <p>This will be the ingredient list</p> -->
+<div class="ingredient-list-container">
+  <a class="ingredient-link" *ngFor="let ingredient of ingredientsArray">
+    {{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit }}
+  </a>
+</div>

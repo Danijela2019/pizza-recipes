@@ -1,0 +1,9 @@
+.ingredient-link {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+.ingredient-list-container {
+  display: flex;
+  flex-direction: column;
+}

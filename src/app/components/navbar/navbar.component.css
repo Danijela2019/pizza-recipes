@@ -1,0 +1,35 @@
+.nav_container {
+  background: #00b300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Amatic SC", cursive;
+  height: 10vh;
+}
+
+.nav_title {
+  color: whitesmoke;
+  padding-left: 0.5rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.nav_list {
+  display: flex;
+  color: whitesmoke;
+  list-style-type: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+li {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.dropdown_list {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}

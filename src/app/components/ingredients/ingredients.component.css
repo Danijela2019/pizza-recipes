@@ -1,6 +1,8 @@
-.app_container {
+.ingredients-section {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+h1 {
   margin: 1rem;
-  justify-content: space-around;
 }
