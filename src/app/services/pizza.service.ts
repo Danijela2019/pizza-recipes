@@ -3,22 +3,13 @@ import { Ingredient } from '../models/ingredient.model';
 
 import { Pizza } from '../models/pizza.model';
 import { IngredientService } from './ingredient.service';
+import {PIZZAS} from '../mock_data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PizzaService {
-  private pizzaArray: Pizza[] = [
-    new Pizza('Capriciossa', 
-    'Test description', 
-    '../../../../assets/images/pizza1.jpg',
-    [new Ingredient("tomato",2,"pieces"),new Ingredient("bacon",300,"grams")]),
-    new Pizza('Vege',
-    'Another test description',
-    '../../../../assets/images/pizza2.jpg',
-    [new Ingredient("onion",1,"pieces"),new Ingredient("cedar",200,"grams")]),
-    
-  ];
+  private pizzaArray: Pizza[] = PIZZAS;
   pizzaItemSelected = new EventEmitter<Pizza>()
 
    constructor( private ingredientService:IngredientService) { }

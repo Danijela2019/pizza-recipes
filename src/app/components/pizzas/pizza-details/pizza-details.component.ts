@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Pizza } from 'src/app/models/pizza.model';
 import { PizzaService } from 'src/app/services/pizza.service';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'pizzaDetails',
@@ -10,13 +11,16 @@ import { PizzaService } from 'src/app/services/pizza.service';
 export class PizzaDetailsComponent implements OnInit {
   @Input() pizzaItem:Pizza;
 
-  constructor(private pizzaService:PizzaService) { }
+  constructor(private pizzaService:PizzaService, private router:Router) { }
 
   ngOnInit(): void {
   }
   onAddToIngredientList(){
-    console.log('Here', this.pizzaItem.ingredients)
     this.pizzaService.addIngredientsToIngredinetList(this.pizzaItem.ingredients)
+  }
+
+  onRedirectToIngredientList(){
+    this.router.navigate(['/ingredients']);
   }
 
 }

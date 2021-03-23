@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Pizza } from 'src/app/models/pizza.model';
 import { PizzaService } from 'src/app/services/pizza.service';
 
@@ -11,9 +12,12 @@ import { PizzaService } from 'src/app/services/pizza.service';
 export class PizzaListComponent implements OnInit {
   pizzaArray: Pizza[];
  
-  constructor(private pizzaService:PizzaService) { }
+  constructor(private pizzaService:PizzaService, private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.pizzaArray = this.pizzaService.getPizzaArray()
+  }
+  onNewPizza() {
+    this.router.navigate(['new'],{relativeTo:this.route} )
   }
 }

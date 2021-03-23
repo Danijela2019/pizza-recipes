@@ -1,26 +1,29 @@
-<div class="details-contaier">
-  <div class="image-container">
-    <img src="" alt="" />
+<div class="details-shadow">
+  <div class="details-contaier">
+    <div class="details-content-container">
+      <h1 class="details-header">{{ pizzaItem.name }}</h1>
+      <p class="details-description">{{ pizzaItem.text }}</p>
+      <img
+        class="details-image"
+        src="{{ pizzaItem.image }}"
+        alt="{{ pizzaItem.name }}"
+      />
+      <ul class="details-list">
+        <li *ngFor="let ingredient of pizzaItem.ingredients">
+          {{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit }}
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="text-container">
-    <h1>{{ pizzaItem.name }}</h1>
-    <p>{{ pizzaItem.text }}</p>
-    <img
-      class="details-image"
-      src="{{ pizzaItem.image }}"
-      alt="{{ pizzaItem.name }}"
-    />
-    <ul>
-      <li *ngFor="let ingredient of pizzaItem.ingredients">
-        {{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit }}
-      </li>
-    </ul>
+  <div class="button-container">
+    <button class="button-add orange" (click)="onAddToIngredientList()">
+      Add to Ingredient list
+    </button>
+    <button
+      class="button-shopping brown"
+      (click)="onRedirectToIngredientList()"
+    >
+      Go to ingredient list
+    </button>
   </div>
-</div>
-<div class="button-container">
-  <button class="button-add orange" (click)="onAddToIngredientList()">
-    Add
-  </button>
-  <button class="button-remove red">Remove</button>
-  <button class="button-shopping brown">To ingredient list</button>
 </div>

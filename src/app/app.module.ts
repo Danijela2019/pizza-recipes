@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DropDownDirective } from './directives/dropDown.directive';
 import { IngredientService } from './services/ingredient.service';
+import { PlaceholderComponent } from './components/pizzas/placeholder/placeholder.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { IngredientService } from './services/ingredient.service';
     PizzaDetailsComponent,
     IngredientEditComponent,
     HomeComponent,
+    PlaceholderComponent,
     DropDownDirective
   ],
   imports: [
