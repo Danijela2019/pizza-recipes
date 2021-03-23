@@ -10,10 +10,17 @@
       src="{{ pizzaItem.image }}"
       alt="{{ pizzaItem.name }}"
     />
+    <ul>
+      <li *ngFor="let ingredient of pizzaItem.ingredients">
+        {{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit }}
+      </li>
+    </ul>
   </div>
 </div>
 <div class="button-container">
-  <button class="button-add orange">Add</button>
+  <button class="button-add orange" (click)="onAddToIngredientList()">
+    Add
+  </button>
   <button class="button-remove red">Remove</button>
   <button class="button-shopping brown">To ingredient list</button>
 </div>

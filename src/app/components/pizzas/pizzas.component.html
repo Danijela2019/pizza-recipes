@@ -1,5 +1,5 @@
 <section class="pizza-section">
-  <pizzaList (pizzaSelectFinal)="onPizzaSelect($event)"></pizzaList>
+  <pizzaList></pizzaList>
   <pizzaDetails
     *ngIf="pizzaItemSelected; else emptyDetail"
     [pizzaItem]="pizzaItemSelected"

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { Pizza } from 'src/app/models/pizza.model';
+import { PizzaService } from 'src/app/services/pizza.service';
 
 @Component({
   selector: 'pizzaItem',
@@ -8,14 +9,16 @@ import { Pizza } from 'src/app/models/pizza.model';
 })
 export class PizzaItemComponent implements OnInit {
   @Input() pizza:Pizza;
-  @Output() pizzaCardClicked = new EventEmitter<void>()
+  
 
-  constructor() { }
+  constructor(private pizzaService:PizzaService) { }
 
   ngOnInit(): void {
   }
+
   onClicked(){
-    this.pizzaCardClicked.emit();
+    this.pizzaService.pizzaItemSelected.emit(this.pizza)
   }
+  
 
 }
