@@ -1,4 +1,10 @@
 <section class="pizza-section">
-  <pizzaList></pizzaList>
-  <pizzaDetails></pizzaDetails>
+  <pizzaList (pizzaSelectFinal)="onPizzaSelect($event)"></pizzaList>
+  <pizzaDetails
+    *ngIf="pizzaItemSelected; else emptyDetail"
+    [pizzaItem]="pizzaItemSelected"
+  ></pizzaDetails>
+  <ng-template #emptyDetail>
+    <p>Please select a Pizza</p>
+  </ng-template>
 </section>

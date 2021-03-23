@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { Pizza } from 'src/app/models/pizza.model';
 
 
@@ -12,10 +12,14 @@ export class PizzaListComponent implements OnInit {
     new Pizza('Capriciossa', 'Test description', '../../../../assets/images/pizza1.jpg'),
     new Pizza('Vege','Another test description','../../../../assets/images/pizza2.jpg')
   ];
+  @Output() pizzaSelectFinal= new EventEmitter<Pizza>()
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  escalatePizzaUp(pizzaItem:Pizza) {
+    this.pizzaSelectFinal.emit(pizzaItem)
+  }
 }

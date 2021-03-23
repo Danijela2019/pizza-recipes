@@ -13,6 +13,8 @@ import { PizzaItemComponent } from './components/pizzas/pizza-item/pizza-item.co
 import { PizzaDetailsComponent } from './components/pizzas/pizza-details/pizza-details.component';
 import { IngredientEditComponent } from './components/ingredients/ingredient-edit/ingredient-edit.component';
 import { HomeComponent } from './components/home/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { DropDownDirective } from './directives/dropDown.directive';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { HomeComponent } from './components/home/home/home.component';
     PizzaItemComponent,
     PizzaDetailsComponent,
     IngredientEditComponent,
-    HomeComponent
+    HomeComponent,
+    DropDownDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

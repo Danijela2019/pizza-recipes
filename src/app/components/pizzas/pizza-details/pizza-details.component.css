@@ -34,3 +34,6 @@
 .brown {
   background: #b35a00;
 }
+.details-image {
+  max-height: 300px;
+}
