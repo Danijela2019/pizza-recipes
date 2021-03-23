@@ -13,23 +13,3 @@
   display: flex;
   flex-direction: column;
 }
-.card_container {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  margin: 1rem 0;
-  background-color: #00b300;
-  height: 100px;
-  color: whitesmoke;
-}
-
-.card_text-container {
-  padding: 0.5rem;
-}
-.card_text-container > h4 {
-  padding: 0.5rem 0;
-}
-.card_image {
-  width: 150px;
-  height: 100%;
-}

@@ -1,1 +1,9 @@
-<p>pizzaItem</p>
+<a class="card_container" (click)="onClicked()">
+  <div class="card_text-container">
+    <h4>{{ pizza.name }}</h4>
+    <p>{{ pizza.text }}</p>
+  </div>
+  <div class="card_image-container">
+    <img class="card_image" [src]="pizza.image" alt="{{ pizza.name }}" />
+  </div>
+</a>
