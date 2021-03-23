@@ -1,0 +1,17 @@
+.placeholder-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 50vw;
+}
+.placeholder-image {
+  z-index: 1;
+  max-width: 100%;
+  height: 65vh;
+}
+.placeholder-header {
+  font-size: 1.5rem;
+}

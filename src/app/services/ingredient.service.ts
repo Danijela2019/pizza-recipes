@@ -21,7 +21,7 @@ export class IngredientService {
     this.ingredientsUpdated.emit(this.ingredientsArray.slice())
   }
   addIngredients(ingredients:Ingredient[]){
-    this.ingredientsArray.push(...this.ingredientsArray)
+    this.ingredientsArray.push(...ingredients)
     this.ingredientsUpdated.emit(this.ingredientsArray.slice())
   }
 }

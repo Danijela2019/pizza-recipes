@@ -5,6 +5,7 @@
   align-items: center;
   font-family: "Amatic SC", cursive;
   height: 10vh;
+  border-bottom: solid 10px red;
 }
 
 .nav_title {
