@@ -15,5 +15,4 @@ export class IngredientEditComponent implements OnInit {
   onAddIngredient(){
     
   }
-
 }

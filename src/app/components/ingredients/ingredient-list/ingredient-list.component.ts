@@ -15,8 +15,7 @@ export class IngredientListComponent implements OnInit {
   ngOnInit(): void {
     this.ingredientsArray= this.ingredientService.getIngredientsArray();
     this.ingredientService.ingredientsUpdated.subscribe((ingredientsArray:Ingredient[])=>{
-      console.log('Now in ing List', ingredientsArray)
-      this.ingredientsArray= ingredientsArray;
+    this.ingredientsArray= ingredientsArray;
     })
   }
 }
