@@ -8,7 +8,6 @@ import { IngredientListComponent } from './components/ingredients/ingredient-lis
 import { PizzaListComponent } from './components/pizzas/pizza-list/pizza-list.component';
 import { IngredientsComponent } from './components/ingredients/ingredients.component';
 import { PizzasComponent } from './components/pizzas/pizzas.component';
-import { IgredientItemComponent } from './components/ingredients/ingredient-item/igredient-item.component';
 import { PizzaItemComponent } from './components/pizzas/pizza-item/pizza-item.component';
 import { PizzaDetailsComponent } from './components/pizzas/pizza-details/pizza-details.component';
 import { IngredientEditComponent } from './components/ingredients/ingredient-edit/ingredient-edit.component';
@@ -26,7 +25,6 @@ import { PlaceholderComponent } from './components/pizzas/placeholder/placeholde
     PizzaListComponent,
     IngredientsComponent,
     PizzasComponent,
-    IgredientItemComponent,
     PizzaItemComponent,
     PizzaDetailsComponent,
     IngredientEditComponent,

@@ -1,11 +1,13 @@
-import { Injectable,EventEmitter} from '@angular/core';
+import { Injectable} from '@angular/core';
 import { Ingredient } from '../models/ingredient.model';
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IngredientService {
-  ingredientsUpdated = new EventEmitter<Ingredient[]>();
+  ingredientsUpdated = new Subject<Ingredient[]>();
+  igredientUpdated = new Subject<number>();
   private ingredientsArray:Ingredient[]=[
     new Ingredient('tomatos', 5,'pieces'),
     new Ingredient ('bacon',200,'grams')
@@ -14,14 +16,27 @@ export class IngredientService {
   constructor() { }
 
   getIngredientsArray(){
-    return this.ingredientsArray.slice()
+    return this.ingredientsArray.slice();
   }
+
+  getIngredient(index:number){
+    return this.ingredientsArray[index];
+  }
+
   addIngredient(ingredientItem:Ingredient){
     this.ingredientsArray.push(ingredientItem);
-    this.ingredientsUpdated.emit(this.ingredientsArray.slice())
+    this.ingredientsUpdated.next(this.ingredientsArray.slice());
   }
   addIngredients(ingredients:Ingredient[]){
-    this.ingredientsArray.push(...ingredients)
-    this.ingredientsUpdated.emit(this.ingredientsArray.slice())
+    this.ingredientsArray.push(...ingredients);
+    this.ingredientsUpdated.next(this.ingredientsArray.slice());
+  }
+  updateIngredient(index:number, newIngredient:Ingredient){
+    this.ingredientsArray[index]= newIngredient;
+    this.ingredientsUpdated.next(this.ingredientsArray.slice());
+  }
+  deleteIngredient(index:number){
+    this.ingredientsArray.splice(index,1);
+    this.ingredientsUpdated.next(this.ingredientsArray.slice());
   }
 }

@@ -1,29 +1,47 @@
-<form class="add_item-form">
+<form
+  class="add_item-form"
+  (ngSubmit)="onIngredientSubmit(formData)"
+  #formData="ngForm"
+>
   <div class="add_item-input-container">
     <input
+      ngNativeValidate
       class="add_item-text_input"
       type="text"
       required
       name="description"
       placeholder="Enter ingredient..."
+      ngModel
     />
     <input
+      ngNativeValidate
       class="add_item-number_input"
       type="number"
       required
       name="amount"
       placeholder="0"
+      ngModel
+      pattern="^[1-9]+[0-9]*$"
     />
-    <input
+    <select
+      ngNativeValidate
       class="add_item-units_input"
-      type="text"
       required
       name="measurment"
-      placeholder="units"
-    />
+      ngModel
+    >
+      <option>grams</option>
+      <option>pieces</option>
+      <option>mililiters</option>
+    </select>
   </div>
   <div class="button-container">
-    <button class="button-add orange">Add Ingredient</button>
-    <button class="button-shopping red">Cancel</button>
+    <button class="button-add orange" [disabled]="!formData.valid">
+      {{ editMode ? "Edit Ingredient" : "Add Ingredient" }}
+    </button>
+    <button class="button-shopping brown" (click)="onReset()">Cancel</button>
+    <button *ngIf="editMode" class="button-shopping red" (click)="onDelete()">
+      Delete
+    </button>
   </div>
 </form>

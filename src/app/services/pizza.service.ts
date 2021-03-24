@@ -4,13 +4,14 @@ import { Ingredient } from '../models/ingredient.model';
 import { Pizza } from '../models/pizza.model';
 import { IngredientService } from './ingredient.service';
 import {PIZZAS} from '../mock_data';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PizzaService {
   private pizzaArray: Pizza[] = PIZZAS;
-  pizzaItemSelected = new EventEmitter<Pizza>()
+  pizzaItemSelected = new Subject<Pizza>()
 
    constructor( private ingredientService:IngredientService) { }
 
@@ -19,7 +20,6 @@ export class PizzaService {
   }
 
   addIngredientsToIngredinetList(ingredients:Ingredient[]){
-    console.log('Ingredients',ingredients)
     this.ingredientService.addIngredients(ingredients)
   }
  
