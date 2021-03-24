@@ -17,7 +17,7 @@ export class PizzaItemComponent implements OnInit {
   }
 
   onClicked(){
-    this.pizzaService.pizzaItemSelected.emit(this.pizza)
+    this.pizzaService.pizzaItemSelected.next(this.pizza)
   }
   
 

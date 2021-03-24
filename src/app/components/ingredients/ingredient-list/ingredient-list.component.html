@@ -1,6 +1,9 @@
 <div class="ingredient-list-container">
-  <a class="ingredient-link" *ngFor="let ingredient of ingredientsArray">
+  <a
+    class="ingredient-link"
+    *ngFor="let ingredient of ingredientsArray; let itemId = index"
+    (click)="onEditIngredient(itemId)"
+  >
     {{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit }}
-    <button class="ingredients-remove-button">X</button>
   </a>
 </div>
