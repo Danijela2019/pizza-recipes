@@ -34,3 +34,7 @@ a {
   text-decoration: none;
   color: whitesmoke;
 }
+
+.active {
+  border-bottom: 2px solid whitesmoke;
+}

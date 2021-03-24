@@ -1,8 +1,15 @@
 .ingredients-section {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
 }
+.ingredients-list-container {
+  width: 30vw;
+}
+.ingredients-form {
+  width: 60vw;
+}
+
 h1 {
   margin: 1rem;
 }
