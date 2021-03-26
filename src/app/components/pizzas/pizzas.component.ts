@@ -6,7 +6,7 @@ import { PizzaService } from 'src/app/services/pizza.service';
   selector: 'pizzasSection',
   templateUrl: './pizzas.component.html',
   styleUrls: ['./pizzas.component.css'],
-  providers:[PizzaService]
+  
 })
 export class PizzasComponent implements OnInit {
 

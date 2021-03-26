@@ -16,6 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { DropDownDirective } from './directives/dropDown.directive';
 import { IngredientService } from './services/ingredient.service';
 import { PlaceholderComponent } from './components/pizzas/placeholder/placeholder.component';
+import { HttpClientModule } from '@angular/common/http'
+import { DataStoreService } from './services/data-store.service';
+import { PizzaService } from './services/pizza.service';
 
 @NgModule({
   declarations: [
@@ -35,9 +38,10 @@ import { PlaceholderComponent } from './components/pizzas/placeholder/placeholde
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [IngredientService],
+  providers: [IngredientService,DataStoreService,PizzaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
