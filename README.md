@@ -1,8 +1,10 @@
 # PizzaRecipes
 
-This project was created using the Angular framework using Services and data binding for cross-component communication.
+This project was created using the Angular framework using Services and data binding for cross-component communication. Pizza data is stored on Firebase for persistance.
 
 ![Pizza recipes home page](pizza_recipes.png)
+
+## Live demo available [here](https://pizza-recipes-fb56e.web.app/)
 
 ## Functionalities
 
