@@ -8,11 +8,8 @@ import {Subject} from 'rxjs';
 export class IngredientService {
   ingredientsUpdated = new Subject<Ingredient[]>();
   igredientUpdated = new Subject<number>();
-  private ingredientsArray:Ingredient[]=[
-    new Ingredient('tomatos', 5,'pieces'),
-    new Ingredient ('bacon',200,'grams')
-  ];
-
+  private ingredientsArray:Ingredient[]=[];
+   
   constructor() { }
 
   getIngredientsArray(){
