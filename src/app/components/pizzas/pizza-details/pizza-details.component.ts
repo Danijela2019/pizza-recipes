@@ -10,15 +10,16 @@ import {Router} from '@angular/router'
 })
 export class PizzaDetailsComponent implements OnInit {
   @Input() pizzaItem:Pizza;
+  ingredientsAdded:boolean=false;
 
   constructor(private pizzaService:PizzaService, private router:Router) { }
 
   ngOnInit(): void {
   }
   onAddToIngredientList(){
+    this.ingredientsAdded=true;
     this.pizzaService.addIngredientsToIngredinetList(this.pizzaItem.ingredients)
   }
-
   onRedirectToIngredientList(){
     this.router.navigate(['/ingredients']);
   }

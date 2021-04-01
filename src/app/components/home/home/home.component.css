@@ -56,3 +56,10 @@ h1 {
 .custom-shape-divider-bottom-1616531380 .shape-fill {
   fill: #00b300;
 }
+
+@media (max-width: 767px) {
+  h1 {
+    margin-left: 1.5rem;
+    text-align: center;
+  }
+}

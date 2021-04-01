@@ -1,5 +1,6 @@
 .details-shadow {
   box-shadow: 0 50px 80px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 .details-contaier {
   display: flex;
@@ -48,4 +49,78 @@
 }
 .details-list {
   margin-top: 0.5rem;
+}
+
+.details-button-info {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  background-color: #baf5bf;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.fade-out {
+  animation: fadeOut ease 1.5s;
+  -webkit-animation: fadeOut ease 1.5s;
+  -moz-animation: fadeOut ease 1.5s;
+  -o-animation: fadeOut ease 1.5s;
+  -ms-animation: fadeOut ease 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .details-contaier {
+    width: 90vw;
+  }
+  .details-button-info {
+    bottom: 20%;
+  }
 }

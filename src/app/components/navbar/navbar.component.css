@@ -38,3 +38,9 @@ a {
 .active {
   border-bottom: 2px solid whitesmoke;
 }
+
+@media (max-width: 767px) {
+  .nav_title {
+    font-size: 2rem;
+  }
+}
