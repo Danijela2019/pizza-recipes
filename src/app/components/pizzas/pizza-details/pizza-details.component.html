@@ -15,6 +15,9 @@
       </ul>
     </div>
   </div>
+  <p class="details-button-info fade-out" *ngIf="ingredientsAdded">
+    Ingredients added
+  </p>
   <div class="button-container">
     <button class="button-add orange" (click)="onAddToIngredientList()">
       Add the ingredients to list

@@ -13,3 +13,13 @@
 h1 {
   margin: 1rem;
 }
+@media (max-width: 767px) {
+  .ingredients-section {
+    flex-direction: column;
+    width: 100vw;
+    margin-left: 1rem;
+  }
+  h1 {
+    width: 100vw;
+  }
+}

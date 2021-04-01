@@ -15,3 +15,20 @@
 .placeholder-header {
   font-size: 1.5rem;
 }
+
+@media (max-width: 767px) {
+  .placeholder_container {
+    margin-top: 1rem;
+    height: 50vh;
+    width: 100vw;
+  }
+  .placeholder-image {
+    max-width: 90vw;
+    height: 65vh;
+    margin-left: 12rem;
+  }
+  .placeholder-header {
+    margin-left: 10rem;
+    width: 60vw;
+  }
+}

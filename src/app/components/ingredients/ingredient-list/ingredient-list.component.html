@@ -4,6 +4,7 @@
     *ngFor="let ingredient of ingredientsArray; let itemId = index"
     (click)="onEditIngredient(itemId)"
   >
-    {{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit }}
+    {{ ingredient.name | uppercase }} {{ ingredient.amount }}
+    {{ ingredient.unit }}
   </a>
 </div>

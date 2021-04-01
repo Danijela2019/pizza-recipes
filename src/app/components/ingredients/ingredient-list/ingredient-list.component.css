@@ -23,3 +23,9 @@
   top: 5px;
   right: 10px;
 }
+
+@media (max-width: 767px) {
+  .ingredient-list-container {
+    width: 90vw;
+  }
+}

@@ -62,13 +62,18 @@ button[disabled] {
   background: #b35a00;
 }
 
+input.ng-invalid.ng-touched {
+  border: solid 1px red;
+  background: rgb(233, 190, 197);
+}
 @media (max-width: 767px) {
   .add_item-form {
     margin: 0.2rem;
   }
 
   .add_item-number_input,
-  .add_item-text_input {
+  .add_item-text_input,
+  .add_item-units_input {
     margin: 0.2rem;
   }
   .add_item-number_input {
@@ -76,6 +81,10 @@ button[disabled] {
   }
   .add_item-text_input {
     width: 70%;
+  }
+  .button-container {
+    margin-top: 7rem;
+    width: 70vw;
   }
 }
 @media (max-width: 467px) {
@@ -85,13 +94,16 @@ button[disabled] {
   }
   .add_item-input-container {
     flex-direction: column;
-    width: 100%;
+    width: 60vw;
   }
   .add_item-number_input {
     width: 100%;
   }
   .add_item-text_input {
     width: 100%;
+  }
+  .add_item-units_input {
+    width: 100px;
   }
   .button-add,
   .button-remove,
